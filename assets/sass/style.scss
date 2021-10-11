@@ -10,16 +10,27 @@
 
 body {
   background-color: $secondary-color;
+  overflow-x: hidden;
 }
 
-// ? HEADER
+.my_btn {
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-image: url(/assets/img/button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+}
+
+// ? HEADER ---> START
 header {
-  // * NAV
   nav {
-    height: 75px;
+    height: 76px;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     padding: 0px 50px;
@@ -30,11 +41,11 @@ header {
       display: flex;
       align-items: center;
       width: 100%;
-      height: 50px;
+      height: 25px;
       text-transform: uppercase;
       .logo {
-        width: 50%;
-        height: 50px;
+        width: 25%;
+        height: 130%;
         display: flex;
         align-items: center;
         // background-color: $debug-color;
@@ -48,7 +59,7 @@ header {
         }
       }
       .menu {
-        width: 50%;
+        width: 75%;
         height: 50px;
         display: flex;
         align-items: center;
@@ -89,9 +100,11 @@ header {
                       i {
                         transition: transform 250ms ease-in-out;
                         &.rotate {
-                          transform:rotate(180deg);
+                          transform: rotate(180deg);
                           -ms-transform: rotate(180deg); /* IE 9 */
-                          -webkit-transform: rotate(180deg); /* Safari e Chrome */
+                          -webkit-transform: rotate(
+                            180deg
+                          ); /* Safari e Chrome */
                         }
                       }
                     }
@@ -99,7 +112,7 @@ header {
                 }
               }
               div {
-                &#dropdown{
+                &#dropdown {
                   position: absolute;
                   background-color: $primary-color;
                   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
@@ -108,10 +121,13 @@ header {
                     &.list {
                       li {
                         display: block;
-                        padding: 2px 5px;
+                        padding: 3px 14px;
                         margin-left: 0px;
                         a {
                           text-transform: uppercase;
+                          &:hover {
+                            border-bottom: 1px solid $text-color;
+                          }
                         }
                       }
                     }
@@ -124,6 +140,123 @@ header {
             }
           }
         }
+      }
+    }
+  }
+}
+// ? HEADER ---> END
+
+// ? SECTION JUMBOTRON ---> START
+#jumbotron {
+  width: 100%;
+  height: 615px;
+  // background-color: $debug-color;
+  opacity: 0.2;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    figure {
+      position: relative;
+      height: 100%;
+      background-image: url(/assets/img/pattern.png);
+      background-repeat: repeat;
+      overflow: hidden;
+      video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        visibility: visible;
+      }
+      figcaption {
+        z-index: 2;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 95%;
+        div {
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ? SECTION JUMBOTRON ---> END
+
+#skills {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: $text-color;
+  .skill {
+    flex-basis: 25%;
+    height: 100%;
+    margin: 0px 1px;
+    padding: 50px;
+    background-color: $primary-color;
+    color: $text-color;
+    &:nth-child(1) {
+      margin: 0;
+    }
+    &:nth-child(4) {
+      margin: 0;
+    }
+    h2 {
+      width: 18px;
+      height: 31px;
+      margin-bottom: 15px;
+      &::before {
+        display: block;
+        content: "\002F \002F";
+        width: 18px;
+        height: 31px;
+        margin-bottom: 15px;
+        -webkit-transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        -ms-transform: translate(-100%, 0);
+        -o-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+      }
+      span {
+        font-weight: lighter;
+        font-size: 1.2rem;
+      }
+      strong {
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin-top: 20px; 
+        width: max-content;  
+      }
+    }
+    .text {
+      display: none;
+      margin-top: 120px;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+    &:hover {
+      cursor: pointer;
+      .text {
+        display: block;
       }
     }
   }

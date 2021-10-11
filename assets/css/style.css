@@ -7,13 +7,25 @@
 
 body {
   background-color: #FDCF32;
+  overflow-x: hidden;
+}
+
+.my_btn {
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-image: url(/assets/img/button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
 }
 
 header nav {
-  height: 75px;
+  height: 76px;
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   padding: 0px 50px;
@@ -24,12 +36,12 @@ header nav .navbar {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 25px;
   text-transform: uppercase;
 }
 header nav .navbar .logo {
-  width: 50%;
-  height: 50px;
+  width: 25%;
+  height: 130%;
   display: flex;
   align-items: center;
 }
@@ -42,7 +54,7 @@ header nav .navbar .logo span {
   font-size: 1.6rem;
 }
 header nav .navbar .menu {
-  width: 50%;
+  width: 75%;
   height: 50px;
   display: flex;
   align-items: center;
@@ -90,13 +102,128 @@ header nav .navbar .menu ul li.with_dropdown div#dropdown {
 }
 header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li {
   display: block;
-  padding: 2px 5px;
+  padding: 3px 14px;
   margin-left: 0px;
 }
 header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li a {
   text-transform: uppercase;
 }
+header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li a:hover {
+  border-bottom: 1px solid #fff;
+}
 header nav .navbar .menu ul li.with_dropdown div#dropdown.show {
+  display: block;
+}
+
+#jumbotron {
+  width: 100%;
+  height: 615px;
+  opacity: 0.2;
+}
+#jumbotron a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#jumbotron a figure {
+  position: relative;
+  height: 100%;
+  background-image: url(/assets/img/pattern.png);
+  background-repeat: repeat;
+  overflow: hidden;
+}
+#jumbotron a figure video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  visibility: visible;
+}
+#jumbotron a figure figcaption {
+  z-index: 2;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 95%;
+}
+#jumbotron a figure figcaption div {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#jumbotron a figure figcaption div img {
+  height: 200px;
+}
+
+#skills {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+}
+#skills .skill {
+  flex-basis: 25%;
+  height: 100%;
+  margin: 0px 1px;
+  padding: 50px;
+  background-color: #000;
+  color: #fff;
+}
+#skills .skill:nth-child(1) {
+  margin: 0;
+}
+#skills .skill:nth-child(4) {
+  margin: 0;
+}
+#skills .skill h2 {
+  width: 18px;
+  height: 31px;
+  margin-bottom: 15px;
+}
+#skills .skill h2::before {
+  display: block;
+  content: "//";
+  width: 18px;
+  height: 31px;
+  margin-bottom: 15px;
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+#skills .skill h2 span {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+#skills .skill h2 strong {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  width: max-content;
+}
+#skills .skill .text {
+  display: none;
+  margin-top: 120px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+#skills .skill:hover {
+  cursor: pointer;
+}
+#skills .skill:hover .text {
   display: block;
 }
 
