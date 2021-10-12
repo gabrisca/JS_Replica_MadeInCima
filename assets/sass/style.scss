@@ -160,8 +160,8 @@ header {
             right: 0;
             bottom: 0;
             z-index: 99;
-            background: black;
-            color: white;
+            background: #000;
+            color: #fff;
             list-style: none;
             padding-top: 4rem;
             padding-top: 180px;
@@ -204,7 +204,7 @@ header {
             // top: 1rem;
             // right: 1rem;
             padding: 4px;
-            border: black solid 1px;
+            border: #000 solid 1px;
             // background: white;
             cursor: pointer;
             i {
@@ -295,19 +295,19 @@ header {
     height: 100%;
     color: $text-color;
     &:nth-child(1) {
-      border-right: 1px solid white;
+      border-right: 1px solid #fff;
       background-image: url(/assets/img/interfacce-home.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
     &:nth-child(2) {
-      border-right: 1px solid white;
+      border-right: 1px solid #fff;
       background-image: url(/assets/img/web-home.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
     &:nth-child(3) {
-      border-right: 1px solid white;
+      border-right: 1px solid #fff;
       background-image: url(/assets/img/social-home.jpg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -409,7 +409,7 @@ header {
   #skills {
     .skill {
       flex-basis: 100%;
-      border-top: 1px solid white;
+      border-top: 1px solid #fff;
       max-height: 250px;
       &:nth-child(1) {
         border-right: 0px;
@@ -456,7 +456,7 @@ header {
     .skill {
       flex-basis: 50%;
       height: 255px;
-      border-top: 1px solid white;
+      border-top: 1px solid #fff;
       div {
         h2 {
           span {
@@ -484,7 +484,7 @@ header {
   }
 }
 
-@media all and (min-width: 751px) and (max-width: 919px) {
+@media all and (min-width: 751px) and (max-width: 940px) {
   nav {
     padding: 0px 20px;
     #navbar {
@@ -507,7 +507,7 @@ header {
     .skill {
       flex-basis: 50%;
       height: 295px;
-      border-top: 1px solid white;
+      border-top: 1px solid #fff;
       &:hover {
         p {
           &.text {
@@ -522,7 +522,7 @@ header {
   }
 }
 
-@media all and (min-width: 920px) and (max-width: 999px) {
+@media all and (min-width: 941px) and (max-width: 999px) {
   nav {
     padding: 0px 50px;
     #navbar {

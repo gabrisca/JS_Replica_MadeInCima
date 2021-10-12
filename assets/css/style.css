@@ -132,8 +132,8 @@ header nav #navbar .menu ul.hamburger_menu {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   list-style: none;
   padding-top: 4rem;
   padding-top: 180px;
@@ -170,7 +170,7 @@ header nav #navbar .menu div.hamburger {
   position: fixed;
   z-index: 100;
   padding: 4px;
-  border: black solid 1px;
+  border: #000 solid 1px;
   cursor: pointer;
 }
 header nav #navbar .menu div.hamburger i.my_hamburger:hover, header nav #navbar .menu div.hamburger i.my_closed:hover {
@@ -248,19 +248,19 @@ header nav #navbar .menu div.hamburger i.my_closed {
   color: #fff;
 }
 #skills .skill:nth-child(1) {
-  border-right: 1px solid white;
+  border-right: 1px solid #fff;
   background-image: url(/assets/img/interfacce-home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 #skills .skill:nth-child(2) {
-  border-right: 1px solid white;
+  border-right: 1px solid #fff;
   background-image: url(/assets/img/web-home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 #skills .skill:nth-child(3) {
-  border-right: 1px solid white;
+  border-right: 1px solid #fff;
   background-image: url(/assets/img/social-home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -340,7 +340,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
 
   #skills .skill {
     flex-basis: 100%;
-    border-top: 1px solid white;
+    border-top: 1px solid #fff;
     max-height: 250px;
   }
   #skills .skill:nth-child(1) {
@@ -373,7 +373,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   #skills .skill {
     flex-basis: 50%;
     height: 255px;
-    border-top: 1px solid white;
+    border-top: 1px solid #fff;
   }
   #skills .skill div h2 span {
     font-size: 1rem;
@@ -391,7 +391,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
     display: none;
   }
 }
-@media all and (min-width: 751px) and (max-width: 919px) {
+@media all and (min-width: 751px) and (max-width: 940px) {
   nav {
     padding: 0px 20px;
   }
@@ -405,7 +405,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   #skills .skill {
     flex-basis: 50%;
     height: 295px;
-    border-top: 1px solid white;
+    border-top: 1px solid #fff;
   }
   #skills .skill:hover p.text {
     display: none;
@@ -414,7 +414,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
     border-right: 0px;
   }
 }
-@media all and (min-width: 920px) and (max-width: 999px) {
+@media all and (min-width: 941px) and (max-width: 999px) {
   nav {
     padding: 0px 50px;
   }
