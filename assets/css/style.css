@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FDCF32;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -20,6 +20,14 @@ body {
   background-size: contain;
 }
 
+.showMenu {
+  transform: translateY(0);
+}
+
+.hideMenu {
+  transform: translateY(-100%);
+}
+
 header nav {
   height: 76px;
   width: 100%;
@@ -28,51 +36,49 @@ header nav {
   z-index: 1;
   display: flex;
   align-items: center;
-  padding: 0px 50px;
   background-color: #000;
   color: #fff;
 }
-header nav .navbar {
+header nav #navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 25px;
   text-transform: uppercase;
 }
-header nav .navbar .logo {
-  width: 25%;
+header nav #navbar .logo {
   height: 130%;
   display: flex;
   align-items: center;
 }
-header nav .navbar .logo img {
+header nav #navbar .logo img {
   height: 100%;
-  margin-left: -7px;
+  margin-right: 5px;
 }
-header nav .navbar .logo span {
+header nav #navbar .logo span {
   font-weight: bolder;
   font-size: 1.6rem;
 }
-header nav .navbar .menu {
-  width: 75%;
+header nav #navbar .menu {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
 }
-header nav .navbar .menu ul li {
+header nav #navbar .menu ul.inline_menu li {
   position: relative;
   display: inline-block;
   list-style: none;
   margin-left: 35px;
 }
-header nav .navbar .menu ul li a {
+header nav #navbar .menu ul.inline_menu li a {
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-decoration: none;
   color: #fff;
 }
-header nav .navbar .menu ul li a.link::after {
+header nav #navbar .menu ul.inline_menu li a.link::after {
   width: 100%;
   height: 1px;
   display: block;
@@ -81,44 +87,105 @@ header nav .navbar .menu ul li a.link::after {
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-header nav .navbar .menu ul li a.link:hover::after {
+header nav #navbar .menu ul.inline_menu li a.link:hover::after {
   transform: scaleX(1);
 }
-header nav .navbar .menu ul li.with_dropdown div.open a.dropit i {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div.open a.dropit i {
   transition: transform 250ms ease-in-out;
 }
-header nav .navbar .menu ul li.with_dropdown div.open a.dropit i.rotate {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div.open a.dropit i.rotate {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   /* IE 9 */
   -webkit-transform: rotate(180deg);
   /* Safari e Chrome */
 }
-header nav .navbar .menu ul li.with_dropdown div#dropdown {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div#dropdown {
   position: absolute;
   background-color: #000;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   display: none;
 }
-header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div#dropdown ul.list li {
   display: block;
   padding: 3px 14px;
   margin-left: 0px;
 }
-header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li a {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div#dropdown ul.list li a {
   text-transform: uppercase;
 }
-header nav .navbar .menu ul li.with_dropdown div#dropdown ul.list li a:hover {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div#dropdown ul.list li a:hover {
   border-bottom: 1px solid #fff;
 }
-header nav .navbar .menu ul li.with_dropdown div#dropdown.show {
+header nav #navbar .menu ul.inline_menu li.with_dropdown div#dropdown.show {
   display: block;
+}
+header nav #navbar .menu ul.hamburger_menu {
+  position: fixed;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+  padding-top: 180px;
+}
+header nav #navbar .menu ul.hamburger_menu li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header nav #navbar .menu ul.hamburger_menu li a {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+header nav #navbar .menu ul.hamburger_menu li a::after {
+  width: 100%;
+  height: 1px;
+  display: block;
+  content: "";
+  border-bottom: 1px solid #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+header nav #navbar .menu ul.hamburger_menu li a:hover::after {
+  transform: scaleX(1);
+}
+header nav #navbar .menu div.hamburger {
+  position: fixed;
+  z-index: 100;
+  padding: 4px;
+  border: black solid 1px;
+  cursor: pointer;
+}
+header nav #navbar .menu div.hamburger i.my_hamburger:hover, header nav #navbar .menu div.hamburger i.my_closed:hover {
+  cursor: pointer;
+  color: #FDCF32;
+}
+header nav #navbar .menu div.hamburger i.my_closed {
+  display: none;
 }
 
 #jumbotron {
   width: 100%;
   height: 615px;
-  opacity: 0.2;
+  background-color: #FDCF32;
+  opacity: 0.9;
 }
 #jumbotron a {
   display: block;
@@ -146,7 +213,7 @@ header nav .navbar .menu ul li.with_dropdown div#dropdown.show {
 #jumbotron a figure figcaption {
   z-index: 2;
   position: absolute;
-  top: 60%;
+  top: 52%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -168,30 +235,54 @@ header nav .navbar .menu ul li.with_dropdown div#dropdown.show {
 
 #skills {
   display: flex;
+  justify-content: 25%;
+  flex-wrap: wrap;
   width: 100%;
   height: 500px;
   background-color: #fff;
 }
 #skills .skill {
+  position: relative;
   flex-basis: 25%;
   height: 100%;
-  margin: 0px 1px;
-  padding: 50px;
-  background-color: #000;
   color: #fff;
 }
 #skills .skill:nth-child(1) {
-  margin: 0;
+  border-right: 1px solid white;
+  background-image: url(/assets/img/interfacce-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#skills .skill:nth-child(2) {
+  border-right: 1px solid white;
+  background-image: url(/assets/img/web-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#skills .skill:nth-child(3) {
+  border-right: 1px solid white;
+  background-image: url(/assets/img/social-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #skills .skill:nth-child(4) {
-  margin: 0;
+  background-image: url(/assets/img/formazione-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#skills .skill h2 {
-  width: 18px;
-  height: 31px;
+#skills .skill div {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+#skills .skill div h2 {
+  width: 100%;
   margin-bottom: 15px;
 }
-#skills .skill h2::before {
+#skills .skill div h2::before {
   display: block;
   content: "//";
   width: 18px;
@@ -203,28 +294,167 @@ header nav .navbar .menu ul li.with_dropdown div#dropdown.show {
   -o-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
 }
-#skills .skill h2 span {
+#skills .skill div h2 span {
+  width: 100%;
   font-weight: lighter;
   font-size: 1.2rem;
 }
-#skills .skill h2 strong {
+#skills .skill div h2 strong {
+  width: 100%;
   display: block;
   text-transform: uppercase;
   font-size: 1.3rem;
   margin-top: 20px;
-  width: max-content;
 }
-#skills .skill .text {
+#skills .skill div p.text {
   display: none;
-  margin-top: 120px;
+  margin-top: 30px;
   text-transform: uppercase;
   line-height: 1.6;
 }
 #skills .skill:hover {
   cursor: pointer;
+  background: #000;
 }
 #skills .skill:hover .text {
   display: block;
+}
+
+/* ************************************************* */
+/* *******     M E D I A    Q U E R I E S   ******** */
+/* ************************************************* */
+@media all and (max-width: 600px) {
+  nav {
+    padding: 0px 20px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: none;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: block;
+  }
+
+  #jumbotron a figure figcaption div img {
+    height: 140px;
+  }
+
+  #skills .skill {
+    flex-basis: 100%;
+    border-top: 1px solid white;
+    max-height: 250px;
+  }
+  #skills .skill:nth-child(1) {
+    border-right: 0px;
+  }
+  #skills .skill:nth-child(2) {
+    border-right: 0px;
+  }
+  #skills .skill:nth-child(3) {
+    border-right: 0px;
+  }
+  #skills .skill:nth-child(4) {
+    border-right: 0px;
+  }
+  #skills .skill:hover p.text {
+    display: none;
+  }
+}
+@media all and (min-width: 601px) and (max-width: 750px) {
+  nav {
+    padding: 0px 20px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: none;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: block;
+  }
+
+  #skills .skill {
+    flex-basis: 50%;
+    height: 255px;
+    border-top: 1px solid white;
+  }
+  #skills .skill div h2 span {
+    font-size: 1rem;
+  }
+  #skills .skill div h2 strong {
+    font-size: 1.1rem;
+  }
+  #skills .skill:nth-child(2) {
+    border-right: 0px;
+  }
+  #skills .skill:nth-child(4) {
+    border-right: 0px;
+  }
+  #skills .skill:hover p.text {
+    display: none;
+  }
+}
+@media all and (min-width: 751px) and (max-width: 919px) {
+  nav {
+    padding: 0px 20px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: none;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: block;
+  }
+
+  #skills .skill {
+    flex-basis: 50%;
+    height: 295px;
+    border-top: 1px solid white;
+  }
+  #skills .skill:hover p.text {
+    display: none;
+  }
+  #skills .skill:nth-child(2) {
+    border-right: 0px;
+  }
+}
+@media all and (min-width: 920px) and (max-width: 999px) {
+  nav {
+    padding: 0px 50px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: block;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: none;
+  }
+  nav #navbar .menu div.hamburger {
+    display: none;
+  }
+}
+@media all and (min-width: 1000px) and (max-width: 1199px) {
+  nav {
+    padding: 0px 50px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: block;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: none;
+  }
+  nav #navbar .menu div.hamburger {
+    display: none;
+  }
+}
+@media all and (min-width: 1200px) {
+  nav {
+    padding: 0px 50px;
+  }
+  nav #navbar .menu ul.inline_menu {
+    display: block;
+  }
+  nav #navbar .menu ul.hamburger_menu {
+    display: none;
+  }
+  nav #navbar .menu div.hamburger {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

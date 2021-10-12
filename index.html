@@ -28,13 +28,13 @@
   <header>
     <!-- * NAV -->
     <nav>
-      <div class="navbar">
+      <div id="navbar">
         <div class="logo">
-          <img src="./assets/img/logo.png" alt="logo Made in Cima" />
+          <img src="./assets/img/logo3.png" alt="logo Made in Cima" />
           <span>made in cima</span>
         </div>
         <div class="menu">
-          <ul>
+          <ul class="inline_menu">
             <li>
               <a class="link" href="#"> agenzia </a>
             </li>
@@ -52,7 +52,8 @@
             </li>
             <li class="with_dropdown" onclick="myDropdown('dropdown')">
               <div class="open">
-                <a class="dropit" href="#"> it
+                <a class="dropit" href="#">
+                  it
                   <i class="fas fa-chevron-down dropit"></i>
                 </a>
               </div>
@@ -64,53 +65,99 @@
               </div>
             </li>
           </ul>
+          <ul class="hamburger_menu hideMenu">
+            <li>
+              <a class="menuItem" href="#"> agenzia </a>
+            </li>
+            <li>
+              <a class="menuItem" href="#"> portfolio </a>
+            </li>
+            <li>
+              <a class="menuItem" href="#"> clienti </a>
+            </li>
+            <li>
+              <a class="menuItem" href="#"> blog </a>
+            </li>
+            <li>
+              <a class="menuItem" href="#"> contatti </a>
+            </li>
+            <li>
+              <img src="https://img.icons8.com/office/16/000000/england.png" />
+              <a href="#">en</a>
+            </li>
+            <li>
+              <img src="https://img.icons8.com/office/16/000000/germany.png" />
+              <a href="#">de</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <i class="my_hamburger fas fa-bars fa-2x"></i>
+            <i class="my_closed fas fa-times fa-2x"></i>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- ? JUMBOTRON SECTION-->
   <section id="jumbotron">
     <a class="video-container" href="#" target="_blank">
       <figure>
-        <video class="video" loop="" playsinline="" autoplay="" muted="" poster="https://www.madeincima.it/wp-content/uploads/2018/01/MIC-home-banner-tastiere.jpg" data-video="0">
-          <source src="https://www.madeincima.it/wp-content/uploads/2017/12/MadeInCima_Loop_resized_v4-1.mp4" type="video/mp4">
+        <video class="video" loop="" playsinline="" autoplay="" muted=""
+          poster="https://www.madeincima.it/wp-content/uploads/2018/01/MIC-home-banner-tastiere.jpg" data-video="0">
+          <source src="https://www.madeincima.it/wp-content/uploads/2017/12/MadeInCima_Loop_resized_v4-1.mp4"
+            type="video/mp4" />
         </video>
         <figcaption>
-            <div>
-              <img src="/assets/img/MadeInCima.png" alt="Made in Cima">
-            </div>
+          <div>
+            <img src="/assets/img/MadeInCima.png" alt="Made in Cima" />
+          </div>
         </figcaption>
       </figure>
     </a>
   </section>
 
+  <!-- ? SKILLS SECTION -->
   <section id="skills">
     <div class="skill">
-      <h2>
-        <span>Progettiamo</span>
-        <strong>Interfacce usabili</strong>
-      </h2>
-      <div class="text">
-        <p>Rendere semplice ciò che non è immediato è il nostro mestiere.</p>
+      <div>
+        <h2>
+          <span>Progettiamo</span>
+          <strong>interfacce usabili</strong>
+        </h2>
+        <p class="text">
+          Rendere semplice ciò che non è immediato è il nostro mestiere.
+        </p>
       </div>
     </div>
     <div class="skill">
-      <h2>
-        <span>Progettiamo</span>
-        <strong>Interfacce usabili</strong>
-      </h2>
+      <div>
+        <h2>
+          <span>Realizziamo</span>
+          <strong>siti web, app e ecommerce</strong>
+        </h2>
+        <p class="text">Siamo al 100% digital, niente è escluso.</p>
+      </div>
     </div>
     <div class="skill">
-      <h2>
-        <span>Progettiamo</span>
-        <strong>Interfacce usabili</strong>
-      </h2>
+      <div>
+        <h2>
+          <span>Creiamo</span>
+          <strong>social, seo e web marketing</strong>
+        </h2>
+        <p class="text">Esserci non basta. Vi aiutiamo a farvi conoscere.</p>
+      </div>
     </div>
     <div class="skill">
-      <h2>
-        <span>Progettiamo</span>
-        <strong>Interfacce usabili</strong>
-      </h2>
+      <div>
+        <h2>
+          <span>Facciamo</span>
+          <strong>formazione e consulenza</strong>
+        </h2>
+        <p class="text">
+          Non ci teniamo tutto per noi. Vi aiutiamo a camminare.
+        </p>
+      </div>
     </div>
   </section>
 
