@@ -1,3 +1,34 @@
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -330,6 +361,100 @@ header nav #navbar .menu div.hamburger i.my_closed {
   display: block;
 }
 
+#main_sponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 6%;
+}
+#main_sponsor .sponsor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  background-color: #fff;
+}
+#main_sponsor .sponsor img {
+  width: 25%;
+  height: 80%;
+}
+#main_sponsor .sponsor img:hover {
+  -webkit-filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
+  filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
+}
+
+#archive {
+  background-color: rgba(255, 0, 0, 0.322);
+}
+#archive h2 {
+  text-align: center;
+  margin: 10px 0;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+#archive ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+#archive ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 500px;
+  background-color: rgba(255, 0, 0, 0.322);
+  border: 1px solid black;
+  position: relative;
+}
+#archive ul li a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+#archive ul li a figure {
+  width: 100%;
+  height: 100%;
+}
+#archive ul li a figure img {
+  height: 70%;
+  -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -o-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+}
+#archive ul li a figure figcaption {
+  margin: 0 auto;
+  width: 80%;
+  height: 30%;
+}
+#archive ul li a figure figcaption h2 {
+  margin-left: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#archive ul li a figure figcaption p, #archive ul li a figure figcaption h2 {
+  text-align: left;
+}
+#archive ul li span {
+  display: none;
+  position: absolute;
+  bottom: 10%;
+  text-transform: uppercase;
+  color: #FDCF32;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px #000;
+}
+
 #lateral_title {
   position: fixed;
   top: 450px;
@@ -350,6 +475,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   letter-spacing: 2px;
   background: transparent;
   color: #fff;
+  text-shadow: 1px 1px 5px #000;
 }
 #lateral_title span::after {
   position: absolute;
@@ -360,6 +486,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   display: block;
   content: "";
   background: #fff;
+  box-shadow: 1px 1px 5px #000;
 }
 
 /* ************************************************* */
@@ -400,6 +527,23 @@ header nav #navbar .menu div.hamburger i.my_closed {
   #skills .skill:hover p.text {
     display: none;
   }
+
+  #main_sponsor {
+    margin-top: 500px;
+  }
+
+  #archive ul li {
+    width: 100%;
+  }
+  #archive ul li a figure img {
+    height: 100%;
+  }
+  #archive ul li a figure figcaption {
+    display: none;
+  }
+  #archive ul li span {
+    display: block;
+  }
 }
 @media all and (min-width: 601px) and (max-width: 750px) {
   nav {
@@ -432,6 +576,10 @@ header nav #navbar .menu div.hamburger i.my_closed {
   #skills .skill:hover p.text {
     display: none;
   }
+
+  #archive ul li {
+    width: 100%;
+  }
 }
 @media all and (min-width: 751px) and (max-width: 940px) {
   nav {
@@ -454,6 +602,14 @@ header nav #navbar .menu div.hamburger i.my_closed {
   }
   #skills .skill:nth-child(2) {
     border-right: 0px;
+  }
+
+  #main_sponsor {
+    margin-top: 90px;
+  }
+
+  #archive ul li a figure img {
+    height: 60%;
   }
 }
 @media all and (min-width: 941px) and (max-width: 999px) {
