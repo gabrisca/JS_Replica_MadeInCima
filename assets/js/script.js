@@ -1,12 +1,10 @@
 //////////////////////////////////////////////////////
 
-// * access to an element
+// * to select an element
 let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 let query = (query) => document.querySelector(query);
-let queryAll = (query) => document.querySelectorAll(query);
-
-//////////////////////////////////////////////////////
+let queryAll = (queryAll) => document.querySelectorAll(queryAll);
 
 //////////////////////////////////////////////////////
 
@@ -36,7 +34,7 @@ menuItems.forEach(
   }
 )
 
-// HIDE NAVBAR ON SCROLLDOWN
+// HIDE NAVBAR ON SCROLLDOWN - SHOW ON SCROLLUP
 window.addEventListener('scroll', () => {
   if(lastScrollY < window.scrollY) {
     console.log('scroll down');
