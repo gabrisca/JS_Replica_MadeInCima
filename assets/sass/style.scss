@@ -13,6 +13,8 @@ body {
   overflow-x: hidden;
 }
 
+///////////////////////////////////////////
+// BUTTON CLASSES
 .my_btn {
   display: block;
   width: 300px;
@@ -23,13 +25,25 @@ body {
   background-size: contain;
 }
 
+///////////////////////////////////////////
+// NAVBAR CLASSES FOR JS
+
 .showMenu {
   transform: translateY(0);
+  visibility: visible;
 }
 
 .hideMenu {
   transform: translateY(-100%);
+  visibility: hidden;
 }
+
+.hideNav {
+  transform: translateY(-76px);
+}
+
+///////////////////////////////////////////
+
 
 // ? HEADER ---> START
 header {
@@ -43,6 +57,7 @@ header {
     align-items: center;
     background-color: $primary-color;
     color: $text-color;
+    transition: transform .2s ease;
     #navbar {
       display: flex;
       align-items: center;
@@ -167,7 +182,8 @@ header {
             padding-top: 180px;
             li {
               text-align: center;
-              margin-bottom: 20px;
+              padding-bottom: 20px;
+              background: #000;
               a {
                 color: #fff;
                 position: relative;
@@ -324,6 +340,7 @@ header {
       width: 80%;
       display: flex;
       flex-direction: column;
+      margin-left: 10px;
       h2 {
         width: 100%;
         margin-bottom: 15px;
@@ -333,6 +350,7 @@ header {
           width: 18px;
           height: 31px;
           margin-bottom: 15px;
+          margin-left: 10px;
           -webkit-transform: translate(-100%, 0);
           -moz-transform: translate(-100%, 0);
           -ms-transform: translate(-100%, 0);
@@ -371,6 +389,42 @@ header {
   }
 }
 // ? SKILLS SECTION ---> END
+
+// ? LATERAL TITLE ---> START
+  #lateral_title {
+    position: fixed;
+    top: 450px;
+    left: -40px;
+    z-index: 800;
+    margin: 0 auto;
+    max-width: 1930px;
+    transform: rotate(270deg);
+    &:hover {
+      span {
+        color: $secondary-color;
+        &::after {
+        background: $secondary-color;
+        }
+      }
+    }
+    span {
+      font-size: 1em;
+      letter-spacing: 2px;
+      background: transparent;
+      color: $text-color;
+      &::after {
+        position: absolute;
+        top: 8px;
+        left: 135px;
+        width: 110px;
+        height: 1px;
+        display: block;
+        content: "";
+        background: #fff;
+      }
+    }
+  }
+// ? LATERAL TITLE ---> END
 
 /* ************************************************* */
 /* *******     M E D I A    Q U E R I E S   ******** */

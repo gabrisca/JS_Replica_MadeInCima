@@ -22,10 +22,16 @@ body {
 
 .showMenu {
   transform: translateY(0);
+  visibility: visible;
 }
 
 .hideMenu {
   transform: translateY(-100%);
+  visibility: hidden;
+}
+
+.hideNav {
+  transform: translateY(-76px);
 }
 
 header nav {
@@ -38,6 +44,7 @@ header nav {
   align-items: center;
   background-color: #000;
   color: #fff;
+  transition: transform 0.2s ease;
 }
 header nav #navbar {
   display: flex;
@@ -140,7 +147,8 @@ header nav #navbar .menu ul.hamburger_menu {
 }
 header nav #navbar .menu ul.hamburger_menu li {
   text-align: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background: #000;
 }
 header nav #navbar .menu ul.hamburger_menu li a {
   color: #fff;
@@ -277,6 +285,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   width: 80%;
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 }
 #skills .skill div h2 {
   width: 100%;
@@ -288,6 +297,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   width: 18px;
   height: 31px;
   margin-bottom: 15px;
+  margin-left: 10px;
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
@@ -318,6 +328,38 @@ header nav #navbar .menu div.hamburger i.my_closed {
 }
 #skills .skill:hover .text {
   display: block;
+}
+
+#lateral_title {
+  position: fixed;
+  top: 450px;
+  left: -40px;
+  z-index: 800;
+  margin: 0 auto;
+  max-width: 1930px;
+  transform: rotate(270deg);
+}
+#lateral_title:hover span {
+  color: #FDCF32;
+}
+#lateral_title:hover span::after {
+  background: #FDCF32;
+}
+#lateral_title span {
+  font-size: 1em;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+}
+#lateral_title span::after {
+  position: absolute;
+  top: 8px;
+  left: 135px;
+  width: 110px;
+  height: 1px;
+  display: block;
+  content: "";
+  background: #fff;
 }
 
 /* ************************************************* */

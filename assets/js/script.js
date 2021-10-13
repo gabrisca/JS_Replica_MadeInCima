@@ -12,8 +12,7 @@ let queryAll = (query) => document.querySelectorAll(query);
 
 // * Selectors
 // DROPDOWN MENU
-const myLinks = classes('link'),
-      chevron = query('i');
+const chevron = query('i');
 
 // HAMBURGER MENU
 const menuItems = queryAll(".menuItem"),
@@ -22,6 +21,9 @@ const menuItems = queryAll(".menuItem"),
       closeIcon= query(".my_closed"),
       menuIcon = query(".my_hamburger");
 
+// NAVBAR
+const nav = query('nav');
+let lastScrollY = window.scrollY;
 //////////////////////////////////////////////////////
 
 // * Events
@@ -33,6 +35,18 @@ menuItems.forEach(
     menuItem.addEventListener("click", toggleMenu);
   }
 )
+
+// HIDE NAVBAR ON SCROLLDOWN
+window.addEventListener('scroll', () => {
+  if(lastScrollY < window.scrollY) {
+    console.log('scroll down');
+    nav.classList.add('hideNav');
+  } else {
+    console.log('scroll up');
+    nav.classList.remove('hideNav');
+  }
+  lastScrollY = window.scrollY
+})
 
 //////////////////////////////////////////////////////
 
@@ -48,7 +62,7 @@ function myDropdown(idEl) {
 // funzione che chiude i dropdwon al click al di fuori di essi e riposiziona lo chevron
 window.onclick = function (e) {
   if (!e.target.matches('.dropit')) {
-    var myDropdown = document.getElementById("dropdown");
+    let myDropdown = document.getElementById('dropdown');
     if (myDropdown.classList.contains('show')) {
       myDropdown.classList.remove('show');
       chevron.classList.remove("rotate")
@@ -71,5 +85,3 @@ function toggleMenu() {
     menuIcon.style.display = "none";
   }
 }
-
-
