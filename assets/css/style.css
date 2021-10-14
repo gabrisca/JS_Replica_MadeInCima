@@ -278,7 +278,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   flex-wrap: wrap;
   width: 100%;
   height: 500px;
-  background-color: #fff;
+  background-color: #000;
 }
 #skills .skill {
   position: relative;
@@ -386,65 +386,77 @@ header nav #navbar .menu div.hamburger i.my_closed {
   filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
 }
 
-#archive {
-  background-color: rgba(255, 0, 0, 0.322);
+#portfolio {
+  background-color: #fff;
 }
-#archive h2 {
+#portfolio h2 {
   text-align: center;
   margin: 10px 0;
   text-transform: uppercase;
   line-height: 1.8;
 }
-#archive ul {
+#portfolio ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
 }
-#archive ul li {
+#portfolio ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
   height: 500px;
-  background-color: rgba(255, 0, 0, 0.322);
-  border: 1px solid black;
   position: relative;
 }
-#archive ul li a {
-  width: 100%;
+#portfolio ul li a {
   height: 100%;
   text-align: center;
   text-decoration: none;
   color: #000;
 }
-#archive ul li a figure {
+#portfolio ul li a figure {
+  position: relative;
   width: 100%;
   height: 100%;
 }
-#archive ul li a figure img {
+#portfolio ul li a figure img {
   height: 70%;
   -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   -o-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  transition: transform 0.2s ease;
 }
-#archive ul li a figure figcaption {
+#portfolio ul li a figure img::after {
+  background-image: url(/assets/img/view.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 80px;
+}
+#portfolio ul li a figure img:hover {
+  transform: scale(0.8);
+  opacity: 0.8;
+}
+#portfolio ul li a figure figcaption {
   margin: 0 auto;
   width: 80%;
   height: 30%;
 }
-#archive ul li a figure figcaption h2 {
+#portfolio ul li a figure figcaption h2 {
+  font-size: 0.9rem;
   margin-left: 15px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-#archive ul li a figure figcaption p, #archive ul li a figure figcaption h2 {
+#portfolio ul li a figure figcaption p,
+#portfolio ul li a figure figcaption h2 {
   text-align: left;
 }
-#archive ul li span {
+#portfolio ul li span {
   display: none;
   position: absolute;
   bottom: 10%;
@@ -452,7 +464,9 @@ header nav #navbar .menu div.hamburger i.my_closed {
   color: #FDCF32;
   font-weight: bolder;
   letter-spacing: 3px;
+  text-align: center;
   text-shadow: 1px 1px 5px #000;
+  background-color: rgba(0, 0, 0, 0.219);
 }
 
 #lateral_title {
@@ -475,7 +489,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   letter-spacing: 2px;
   background: transparent;
   color: #fff;
-  text-shadow: 1px 1px 5px #000;
+  text-shadow: 0px 0px 5px #000;
 }
 #lateral_title span::after {
   position: absolute;
@@ -532,16 +546,16 @@ header nav #navbar .menu div.hamburger i.my_closed {
     margin-top: 500px;
   }
 
-  #archive ul li {
+  #portfolio ul li {
     width: 100%;
   }
-  #archive ul li a figure img {
+  #portfolio ul li a figure img {
     height: 100%;
   }
-  #archive ul li a figure figcaption {
+  #portfolio ul li a figure figcaption {
     display: none;
   }
-  #archive ul li span {
+  #portfolio ul li span {
     display: block;
   }
 }
@@ -577,7 +591,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
     display: none;
   }
 
-  #archive ul li {
+  #portfolio ul li {
     width: 100%;
   }
 }
@@ -608,7 +622,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
     margin-top: 90px;
   }
 
-  #archive ul li a figure img {
+  #portfolio ul li a figure img {
     height: 60%;
   }
 }

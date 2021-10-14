@@ -304,7 +304,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
   height: 500px;
-  background-color: $text-color;
+  background-color: #000;
   .skill {
     position: relative;
     flex-basis: 25%;
@@ -391,7 +391,7 @@ header {
 // ? SKILLS SECTION ---> END
 
 // ? MAIN SPONSOR SECTION ---> START
-#main_sponsor{
+#main_sponsor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,83 +419,135 @@ header {
 }
 // ? MAIN SPONSOR SECTION ---> END
 
-// ? ARCHIVE SECTION ---> START
-  #archive {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    background-color: $debug-color;
-    h2 {
-      text-align: center;
-      margin: 10px 0;
-      text-transform: uppercase;
-      line-height: 1.8;
-    }
-    ul {
+// ? PORTFOLIO SECTION ---> START
+#portfolio {
+  background-color: #fff;
+  h2 {
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      list-style: none;
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: calc(100%/2);
-        height: 500px;
-        background-color: $debug-color;
-        border: 1px solid black;
-        position: relative;
-        a {
+      justify-content: center;
+      width: calc(100% / 2);
+      height: 500px;
+      position: relative;
+      a {
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: $primary-color;
+        figure {
+          position: relative;
           width: 100%;
           height: 100%;
-          text-align: center;
-          text-decoration: none;
-          color: $primary-color;
-          figure {
-            width: 100%;
-            height: 100%;
-            img {
-              height: 70%;
-              -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
-              -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
-              -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
-              -o-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
-              clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+          img {
+            height: 70%;
+            -webkit-clip-path: polygon(
+              40px 0,
+              calc(100% - 40px) 0%,
+              100% 40px,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              40px 100%,
+              0% calc(100% - 40px),
+              0% 40px
+            );
+            -moz-clip-path: polygon(
+              40px 0,
+              calc(100% - 40px) 0%,
+              100% 40px,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              40px 100%,
+              0% calc(100% - 40px),
+              0% 40px
+            );
+            -ms-clip-path: polygon(
+              40px 0,
+              calc(100% - 40px) 0%,
+              100% 40px,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              40px 100%,
+              0% calc(100% - 40px),
+              0% 40px
+            );
+            -o-clip-path: polygon(
+              40px 0,
+              calc(100% - 40px) 0%,
+              100% 40px,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              40px 100%,
+              0% calc(100% - 40px),
+              0% 40px
+            );
+            clip-path: polygon(
+              40px 0,
+              calc(100% - 40px) 0%,
+              100% 40px,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              40px 100%,
+              0% calc(100% - 40px),
+              0% 40px
+            );
+            transition: transform 0.2s ease;
+            &::after {
+              background-image: url(/assets/img/view.png);
+              background-repeat: no-repeat;
+              background-size: contain;
+              height: 80px;
+              width: 80px;
             }
-            figcaption {
-              margin: 0 auto;
-              width: 80%;
-              height: 30%;
-              h2 {
-                margin-left: 15px;
-                text-transform: uppercase;
-                margin-bottom: 5px;
-              }
-              p, h2 {
-                text-align: left;
-              }
+            &:hover {
+              transform: scale(0.8);
+              opacity: 0.8;
+            }
+          }
+          figcaption {
+            margin: 0 auto;
+            width: 80%;
+            height: 30%;
+            h2 {
+              font-size: 0.9rem;
+              margin-left: 15px;
+              text-transform: uppercase;
+              margin-bottom: 5px;
+            }
+            p,
+            h2 {
+              text-align: left;
             }
           }
         }
-        span {
-          display: none;
-          position: absolute;
-          bottom: 10%;
-          text-transform: uppercase;
-          color: $secondary-color;
-          font-weight: bolder;
-          letter-spacing: 3px;
-          text-shadow: 1px 1px 5px #000;
-        }
+      }
+      span {
+        display: none;
+        position: absolute;
+        bottom: 10%;
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        text-align: center;
+        text-shadow: 1px 1px 5px #000;
+        background-color: rgba(0, 0, 0, 0.219);
       }
     }
   }
-
-
-
-// ? ARCHIVE SECTION ---> END
-
+}
+// ? PORTFOLIO SECTION ---> END
 
 // ? LATERAL TITLE ---> START
 #lateral_title {
@@ -519,7 +571,7 @@ header {
     letter-spacing: 2px;
     background: transparent;
     color: $text-color;
-    text-shadow: 1px 1px 5px #000;
+    text-shadow: 0px 0px 5px #000;
     &::after {
       position: absolute;
       top: 8px;
@@ -595,10 +647,10 @@ header {
       }
     }
   }
-  #main_sponsor{
+  #main_sponsor {
     margin-top: 500px;
   }
-  #archive {
+  #portfolio {
     ul {
       li {
         width: 100%;
@@ -668,7 +720,7 @@ header {
       }
     }
   }
-  #archive {
+  #portfolio {
     ul {
       li {
         width: 100%;
@@ -712,10 +764,10 @@ header {
       }
     }
   }
-  #main_sponsor{
+  #main_sponsor {
     margin-top: 90px;
   }
-  #archive {
+  #portfolio {
     ul {
       li {
         a {
