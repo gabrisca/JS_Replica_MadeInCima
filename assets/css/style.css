@@ -29,6 +29,31 @@
     transform: translateY(0);
   }
 }
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -469,6 +494,60 @@ header nav #navbar .menu div.hamburger i.my_closed {
   background-color: rgba(0, 0, 0, 0.219);
 }
 
+#about {
+  background-image: url(/assets/img/pattern.png);
+  background-repeat: repeat;
+  background-color: #FDCF32;
+  padding: 5%;
+}
+#about .scroll-element, #about figure > img {
+  -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  -o-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+  clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+}
+#about .scroll-container {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+#about .scroll-container .scroll-element {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+}
+#about .scroll-container .scroll-element figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#about .scroll-container .scroll-element figure img {
+  width: 100%;
+  max-width: 450px;
+  margin-right: 50px;
+}
+#about .scroll-container .scroll-element figure figcaption {
+  width: 100%;
+  letter-spacing: 2px;
+  padding: 1%;
+}
+#about .scroll-container .scroll-element figure figcaption h4, #about .scroll-container .scroll-element figure figcaption h2 {
+  margin-bottom: 20px;
+}
+#about .scroll-container .scroll-element figure figcaption h2 {
+  font-size: 1.6rem;
+}
+#about .scroll-container .scroll-element figure figcaption h4 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+#about .scroll-container .scroll-element figure figcaption p {
+  line-height: 1.5;
+  padding: 2%;
+}
+
 #lateral_title {
   position: fixed;
   top: 450px;
@@ -558,6 +637,15 @@ header nav #navbar .menu div.hamburger i.my_closed {
   #portfolio ul li span {
     display: block;
   }
+
+  #about .scroll-container .scroll-element figure {
+    flex-direction: column;
+    text-align: center;
+  }
+  #about .scroll-container .scroll-element figure img {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 @media all and (min-width: 601px) and (max-width: 750px) {
   nav {
@@ -593,6 +681,15 @@ header nav #navbar .menu div.hamburger i.my_closed {
 
   #portfolio ul li {
     width: 100%;
+  }
+
+  #about .scroll-container .scroll-element figure {
+    text-align: center;
+    flex-direction: column;
+  }
+  #about .scroll-container .scroll-element figure img {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 @media all and (min-width: 751px) and (max-width: 940px) {

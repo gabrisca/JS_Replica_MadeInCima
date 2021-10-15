@@ -549,6 +549,62 @@ header {
 }
 // ? PORTFOLIO SECTION ---> END
 
+// ? ABOUT SECTION ---> START
+#about {
+  background-image: url(/assets/img/pattern.png);
+  background-repeat: repeat;
+  background-color: $secondary-color;
+  padding: 5%;
+  .scroll-element, figure>img {
+    -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+    -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+    -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+    -o-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
+    clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px); 
+  }
+  .scroll-container {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    .scroll-element {
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 20px 0;
+      figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 100%;
+          max-width: 450px;
+          margin-right: 50px;
+        }
+        figcaption {
+          width: 100%;
+          letter-spacing: 2px;
+          padding: 1%;
+          h4, h2 {
+            margin-bottom: 20px;
+          }
+          h2 {
+            font-size: 1.6rem;
+          }
+          h4 {
+            text-transform: uppercase;
+            font-size: .8rem;
+          }
+          p {
+            line-height: 1.5;
+            padding: 2%;
+          }
+        }
+      }
+    }
+  }
+}
+// ? ABOUT SECTION ---> END
+
 // ? LATERAL TITLE ---> START
 #lateral_title {
   position: fixed;
@@ -670,6 +726,20 @@ header {
       }
     }
   }
+  #about {
+    .scroll-container {
+      .scroll-element {
+        figure {
+          flex-direction: column;
+          text-align: center;
+          img {
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (min-width: 601px) and (max-width: 750px) {
@@ -724,6 +794,20 @@ header {
     ul {
       li {
         width: 100%;
+      }
+    }
+  }
+  #about {
+    .scroll-container {
+      .scroll-element {
+        figure {
+          text-align: center;
+          flex-direction: column;
+          img {
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
       }
     }
   }
