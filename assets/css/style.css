@@ -66,16 +66,6 @@ body {
   overflow-x: hidden;
 }
 
-.my_btn {
-  display: block;
-  width: 300px;
-  height: 100px;
-  background-image: url(/assets/img/button.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: contain;
-}
-
 .showMenu {
   transform: translateY(0);
   visibility: visible;
@@ -419,6 +409,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   margin: 10px 0;
   text-transform: uppercase;
   line-height: 1.8;
+  letter-spacing: 5px;
 }
 #portfolio ul {
   display: flex;
@@ -445,6 +436,7 @@ header nav #navbar .menu div.hamburger i.my_closed {
   position: relative;
   width: 100%;
   height: 100%;
+  padding-bottom: 50px;
 }
 #portfolio ul li a figure img {
   height: 70%;
@@ -500,7 +492,8 @@ header nav #navbar .menu div.hamburger i.my_closed {
   background-color: #FDCF32;
   padding: 5%;
 }
-#about .scroll-element, #about figure > img {
+#about .scroll-element,
+#about figure > img {
   -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   -moz-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
   -ms-clip-path: polygon(40px 0, calc(100% - 40px) 0%, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0% calc(100% - 40px), 0% 40px);
@@ -533,7 +526,8 @@ header nav #navbar .menu div.hamburger i.my_closed {
   letter-spacing: 2px;
   padding: 1%;
 }
-#about .scroll-container .scroll-element figure figcaption h4, #about .scroll-container .scroll-element figure figcaption h2 {
+#about .scroll-container .scroll-element figure figcaption h4,
+#about .scroll-container .scroll-element figure figcaption h2 {
   margin-bottom: 20px;
 }
 #about .scroll-container .scroll-element figure figcaption h2 {
@@ -546,6 +540,88 @@ header nav #navbar .menu div.hamburger i.my_closed {
 #about .scroll-container .scroll-element figure figcaption p {
   line-height: 1.5;
   padding: 2%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
+footer .footer_1,
+footer .footer_2,
+footer .footer_3 {
+  border-right: 1px solid #fff;
+}
+footer .aux {
+  width: 25%;
+  border-bottom: 0;
+  padding: 75px 45px 70px;
+}
+footer .aux .heading {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+footer .aux .info {
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  display: block;
+}
+footer .aux .info a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .aux ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+footer .aux ul.center {
+  justify-content: center;
+}
+footer .aux ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+footer .aux ul li a:hover {
+  text-decoration: underline;
+}
+footer .aux ul li a.round {
+  color: #000;
+  display: block;
+  width: 57px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+}
+footer .aux ul li a.round:hover {
+  background-color: #FDCF32;
+}
+footer .aux button {
+  margin-top: 35px;
+  padding: 5% 10%;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+footer .aux button:hover {
+  background-color: #FDCF32;
+}
+footer .aux button:active {
+  color: #fff;
 }
 
 #lateral_title {
@@ -646,6 +722,16 @@ header nav #navbar .menu div.hamburger i.my_closed {
     margin-right: 0;
     margin-bottom: 30px;
   }
+
+  footer .aux {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+  }
+  footer .aux ul {
+    justify-content: center;
+  }
 }
 @media all and (min-width: 601px) and (max-width: 750px) {
   nav {
@@ -691,6 +777,13 @@ header nav #navbar .menu div.hamburger i.my_closed {
     margin-right: 0;
     margin-bottom: 30px;
   }
+
+  footer .aux {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+  }
 }
 @media all and (min-width: 751px) and (max-width: 940px) {
   nav {
@@ -721,6 +814,13 @@ header nav #navbar .menu div.hamburger i.my_closed {
 
   #portfolio ul li a figure img {
     height: 60%;
+  }
+
+  footer .aux {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    text-align: center;
   }
 }
 @media all and (min-width: 941px) and (max-width: 999px) {
