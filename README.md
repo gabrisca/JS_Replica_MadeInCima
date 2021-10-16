@@ -12,23 +12,23 @@
 
 DESKTOP VIEW
 
-![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/large%20devices.png?raw=true);
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/large%20devices.png?raw=true)
 
 <hr>
 
 TABLET VIEW
 
-![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/medium%20devices.png?raw=true);
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/medium%20devices.png?raw=true)
 
 <hr>
 
 SMARTPHONE VIEW
 
-![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/x-small%20devices.png?raw=true);
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/x-small%20devices.png?raw=true)
 
 
 <hr>
 
 HAMBURGER MENU VIEW
 
-![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/xs-menu.png?raw=true);
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/xs-menu.png?raw=true)
