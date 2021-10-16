@@ -4,7 +4,7 @@
 <p>Pagina completamente responsive con effetti di transizione e animazioni dinamiche.</p><br>
 
 
-![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/Registrazione%20.mp4?raw=true)
+![Guarda il video di presentazione](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/Registrazione%20.mp4?raw=true)
 
 
 <ul>
