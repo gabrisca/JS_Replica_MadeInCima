@@ -10,4 +10,4 @@
   <li> JavaScript Vanilla </li>
 </ul>
 
-![Alt text](large devices.png);
+![Alt text](assets/img/introduction/large devices.png);
