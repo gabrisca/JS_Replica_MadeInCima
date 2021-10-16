@@ -10,4 +10,4 @@
   <li> JavaScript Vanilla </li>
 </ul>
 
-![Alt text](assets/img/introduction/large devices.png);
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/large%20devices.png?raw=true);
