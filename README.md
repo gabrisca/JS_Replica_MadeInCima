@@ -3,6 +3,10 @@
 <p>Riproduzione e customizzazione della Home Page del sito Made In Cima (https://www.madeincima.it/).</p><br>
 <p>Pagina completamente responsive con effetti di transizione e animazioni dinamiche.</p><br>
 
+
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/Registrazione%20.mp4?raw=true)
+
+
 <ul>
   <h2> Utilizzo dei segeuenti linguaggi: </h2>
   <li> HTML </li>
