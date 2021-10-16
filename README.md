@@ -10,4 +10,4 @@
   <li> JavaScript Vanilla </li>
 </ul>
 
-![Alt text](https://github.com/gabrisca/JS_Dinamic_ToDoList/blob/master/img/Screenshot%202021-09-29%20at%2012-04-08%20Todo%20List.png)
+![Alt text](large devices.png);
