@@ -10,4 +10,25 @@
   <li> JavaScript Vanilla </li>
 </ul>
 
-![Alt text](https://github.com/gabrisca/JS_Dinamic_ToDoList/blob/master/img/Screenshot%202021-09-29%20at%2012-04-08%20Todo%20List.png)
+DESKTOP VIEW
+
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/large%20devices.png?raw=true)
+
+<hr>
+
+TABLET VIEW
+
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/medium%20devices.png?raw=true)
+
+<hr>
+
+SMARTPHONE VIEW
+
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/x-small%20devices.png?raw=true)
+
+
+<hr>
+
+HAMBURGER MENU VIEW
+
+![Alt text](https://github.com/gabrisca/JS_Replica_MadeInCima/blob/master/assets/img/introduction/xs-menu.png?raw=true)
